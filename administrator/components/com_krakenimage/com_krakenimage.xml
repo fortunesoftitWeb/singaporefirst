@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="2.5" method="upgrade">
+	<name>com_krakenimage</name>
+	<creationDate>June 2015</creationDate>
+	<author>Fortune Soft</author>
+	<authorEmail>example@example.com</authorEmail>
+	<authorUrl>http://www.fortunesoft.com/</authorUrl>
+	<copyright>Copyright Fortune Soft © 2015 - All rights reserved.</copyright>
+	<license>GNU General Public License</license>
+	<version>1.0.1</version>
+	<description>Component for reducing site images</description>
+	
+	<!-- Runs on install/uninstall/update; -->
+	<scriptfile>install.krakenimage.php</scriptfile>
+	
+	<install> <!-- Runs on install -->
+        <sql>
+            <file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+        </sql>
+    </install>
+	
+	<uninstall> <!-- Runs on uninstall -->
+        <sql>
+            <file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+        </sql>
+    </uninstall>
+		
+	<update> <!-- Runs on update; New in 2.5 -->
+        <schemas>
+            <schemapath type="mysql">sql/updates/mysql</schemapath>
+        </schemas>
+    </update>
+	
+	<!-- Site frontend -->
+	<files folder="site">
+		<filename>index.html</filename>
+		<filename>krakenimage.php</filename>
+	</files>
+	
+	<!-- Language frontend -->
+	<languages folder="languages-site">
+		<language tag="en-GB">en-GB/en-GB.com_krakenimage.ini</language>
+	</languages>
+    
+    <media folder="media" destination="com_krakenimage">
+        <folder>images</folder>
+        <folder>img</folder>
+        <folder>css</folder>
+        <folder>js</folder>
+    </media>
+	
+	<!-- Admin backend -->
+	<administration>
+		<menu>krakenImage</menu>
+		<files folder="admin">
+			<filename>index.html</filename>
+			<filename>controller.php</filename>            
+			<filename>krakenimage.php</filename>
+			<filename>access.xml</filename>
+			<filename>config.xml</filename>
+			<filename>controllers/index.html</filename>
+            <filename>controllers/file.json.php</filename>
+            <filename>controllers/file.php</filename>
+            <filename>controllers/folder.php</filename>
+            <filename>helpers/index.html</filename>
+            <filename>helpers/media.php</filename>
+            <filename>layouts/index.html</filename>
+            <filename>layouts/toolbar/index.html</filename>
+            <filename>layouts/toolbar/reduceall.php</filename>
+            <filename>layouts/toolbar/reducemedia.php</filename>
+            <filename>models/index.html</filename>
+            <filename>models/list.php</filename>
+            <filename>models/manager.php</filename>
+            <filename>models/forms/index.html</filename>
+            <filename>views/index.html</filename>
+            <filename>views/images/index.html</filename>
+            <filename>views/images/view.html.php</filename>
+            <filename>views/images/tmpl/index.html</filename>
+            <filename>views/images/tmpl/default.php</filename>
+            <filename>views/imageslist/index.html</filename>
+            <filename>views/imageslist/view.html.php</filename>
+            <filename>views/imageslist/tmpl/index.html</filename>
+            <filename>views/imageslist/tmpl/default.php</filename>            
+            <filename>views/imageslist/tmpl/default_folder.php</filename>
+            <filename>views/imageslist/tmpl/default_image.php</filename>
+            <filename>views/media/index.html</filename>
+            <filename>views/media/view.html.php</filename>
+            <filename>views/media/tmpl/index.html</filename>
+            <filename>views/media/tmpl/default.php</filename>
+            <filename>views/media/tmpl/default_folders.php</filename>
+            <filename>views/media/tmpl/default_navigation.php</filename>           
+            <filename>views/medialist/index.html</filename>
+            <filename>views/medialist/view.html.php</filename>
+            <filename>views/medialist/tmpl/index.html</filename>
+            <filename>views/medialist/tmpl/default.php</filename>
+            <filename>views/medialist/tmpl/details.php</filename>
+            <filename>views/medialist/tmpl/details_doc.php</filename>
+            <filename>views/medialist/tmpl/details_folder.php</filename>
+            <filename>views/medialist/tmpl/details_img.php</filename>
+            <filename>views/medialist/tmpl/details_up.php</filename>
+            <filename>views/medialist/tmpl/thumbs.php</filename>
+            <filename>views/medialist/tmpl/thumbs_doc.php</filename>
+            <filename>views/medialist/tmpl/thumbs_folder.php</filename>
+            <filename>views/medialist/tmpl/thumbs_img.php</filename>
+            <filename>views/medialist/tmpl/thumbs_up.php</filename>
+			<!-- SQL files section -->
+            <folder>sql</folder>
+		</files>
+		
+		<!-- Language backend -->
+		<languages folder="languages-admin">
+			<language tag="en-GB">en-GB/en-GB.com_krakenimage.ini</language>
+            <language tag="en-GB">en-GB/en-GB.com_krakenimage.sys.ini</language>
+		</languages>
+	</administration>
+</extension>

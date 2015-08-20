@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="plugin" version="2.5" group="content" method="upgrade">
+        <name>plg_content_krakenimage</name>
+        <author>Fortune Soft</author>
+        <creationDate>March 2015</creationDate>
+        <copyright>Copyright Fortune Soft © 2015 - All rights reserved.</copyright>
+        <license>GNU General Public License</license>
+        <authorEmail>example@example.com</authorEmail>
+        <authorUrl>http://www.example.com</authorUrl>
+        <version>1.0.1</version>
+        <description>Plugin for reducing site images</description>
+        <files>
+                <filename plugin="prizmimage">krakenimage.php</filename>
+                <filename>index.html</filename>
+                <folder>JSON</folder>
+        </files>
+        <scriptfile>install.krakenimage.php</scriptfile>	  
+        
+        <languages folder="languages">
+            <language tag="en-GB">en-GB/en-GB.plg_content_krakenimage.ini</language>
+            <language tag="en-GB">en-GB/en-GB.plg_content_krakenimage.sys.ini</language>
+        </languages>
+
+        <config>
+                <fields name="params">  
+                
+                    <fieldset name="basic">
+                    
+                        <field name="infospacer" type="spacer" class="text"
+                            label="PLG_CONTENT_KRAKENIMAGE_FIELD_INFOSPACER"
+                            >
+                        </field>
+
+                    </fieldset>
+                    
+                </fields>
+        </config>
+        
+</extension>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+ <extension type="package" version="2.5" method="upgrade">
+    <name>Kraken Image Optimization</name>
+    <author>Fortune Soft</author>
+    <authorEmail>example@example.com</authorEmail>
+    <creationDate>June 2015</creationDate>
+    <copyright>Copyright Fortune Soft © 2015 - All rights reserved.</copyright>    
+    <packagename>krakenimage</packagename>
+    <license>GNU General Public License</license>
+    <version>1.0.1</version>
+    <url>http://www.fortunesoft.com/</url>
+    <packager>Fortne Soft</packager>
+    <packagerurl>http://example.com/</packagerurl>
+    <description>The Kraken Component and Plug-in for reducing images</description>
+    <files folder="packages">
+        <file type="component" id="com_krakenimage" >com_krakenimage.zip</file>
+        <file type="plugin" id="krakenimage" group="content" >plg_krakenimage.zip</file>
+    </files>
+ </extension>

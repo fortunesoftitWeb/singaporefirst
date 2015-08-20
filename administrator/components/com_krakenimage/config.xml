@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+	
+	<fieldset name="kraken_account"
+		label="COM_KRAKEN_ACCOUNT"
+		description=""
+	>
+	
+	 <field name="security_credentials"  type="text"
+            default=""
+            readonly = "readonly"
+            label="Security Credentials"
+            description="Security Credentials"
+            >
+     </field>
+	
+	<field name="plan_level"  type="text"
+            default=""
+            readonly = "readonly"
+            label="Plan Level"
+            description="Plan Level"
+            >
+     </field>
+     
+	<field name="monthly_usage"  type="text"
+            default=""
+            readonly = "readonly"
+            label="Montlhy Quota"
+            description="Montlhy Quota"
+            >
+   </field>
+        
+     <field name="quota_used"  type="text"
+            default=""
+            readonly = "readonly"
+            label="Quota Used"
+            description="Quota Used"
+            >
+     </field>
+        
+    <field name="image_optimized"  type="text"
+            default=""
+            readonly = "readonly"
+            label="Images Optimized"
+            description="Images Optimized"
+            >
+    </field>
+        
+    <field name="pi_totalBytesSaved"  type="text"
+            default=""
+            readonly = "readonly"
+            label="Total Savings"
+            description="Total Savings"
+            >
+    </field>
+</fieldset>
+
+	
+	<fieldset name="component"
+		label="COM_KRAKEN_AUTHENTICATION"
+		description=""
+	>
+	
+       <field name="pi_userid"  type="text"
+            default=""
+            label="COM_KRAKENIMAGE_FIELD_APIKEY_LABEL"
+            description="COM_KRAKENIMAGE_FIELD_APIKEY_DESC"
+            >
+        </field>
+		
+		<field name="pi_secretkey"  type="text"
+            default="true"
+            label="COM_KRAKENIMAGE_FIELD_SECRETEKEY_LABEL"
+            description="COM_KRAKENIMAGE_FIELD_SECRETEKEY_LABEL"
+            >
+        </field> 
+    </fieldset>  
+    
+  <fieldset
+		name="kraken_authentication"
+		label="COM_KRAKEN_CONFIGURATION"
+		description=""
+		>  
+	
+	<field name="pi_optimization_type"
+			type="list"
+			default="COM_KRAKEN_INTELLIGENT_LOSSY"
+			label="COM_KRAKEN_OPTIMIZATION_TYPE"
+			description="COM_KRAKEN_OPTIMIZATION_TYPE"
+		>
+			<option value="true">COM_KRAKEN_INTELLIGENT_LOSSY
+			</option>
+			<option value="false">COM_KRAKEN_LOSSLESS
+			</option>
+	</field>
+		
+        <field
+			name="pi_processOnUpload"
+			type="radio"
+			class="btn-group btn-group-yesno"
+			default="0"
+			label="Auto Optimize Uploads"
+			description="Optimize image automatically at the time of Upload">
+			<option
+				value="1">JYES</option>
+			<option
+				value="0">JNO</option>
+		</field>
+ 
+        <field name="pi_totalBytesSaved" type="hidden" default="0" />
+        
+	</fieldset>
+
+	<fieldset
+		name="permissions"
+		label="JCONFIG_PERMISSIONS_LABEL"
+		description="JCONFIG_PERMISSIONS_DESC"
+		>
+
+		<field
+			name="rules"
+			type="rules"
+			label="JCONFIG_PERMISSIONS_LABEL"
+			filter="rules"
+			validate="rules"
+			component="com_KRAKENIMAGE"
+			section="component" />
+	</fieldset>
+	
+</config>
